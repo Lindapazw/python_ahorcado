@@ -33,4 +33,17 @@ def ahorcado():
         # mostrar el estado actual de la palabra
         # H - L A
         palabra_lista = [letra if letra in letras_adivinadas else '-' for letra in palabra]  # list comprehension
+
+        # mostrado estado del ahorado
         print(vidas_diccionario_visual[vidas])
+
+        # mostrar las letras separadas por un espacio
+        print(f"Palabra:{' '.join(palabra_lista)}")
+
+        letra_usuario = input("Escoge una letra: ").upper()
+
+        # Si la letra escogida por el usuario esta en el abecedario y no esta en el conjunto de letras 
+        #que ya se han ingredaso, se añade la letra al conjunto de letras ingresadas.
+
+        if letra_usuario in abecedario - letras_adivinadas:
+            letras_adivinadas.ad(letra_usuario)
