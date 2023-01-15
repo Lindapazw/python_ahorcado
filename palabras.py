@@ -1,1 +1,1 @@
-palabras= ["aire","ojos","piel","anteojos","joven","viejo"]
+palabras = ["aire","ojos","piel","anteojos","joven","viejo"]
