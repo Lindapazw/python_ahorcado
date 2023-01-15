@@ -47,3 +47,11 @@ def ahorcado():
 
         if letra_usuario in abecedario - letras_adivinadas:
             letras_adivinadas.ad(letra_usuario)
+
+        # si la letra esta en la palabra
+
+        if letra_usuario in letras_por_adivinar:
+            letras_por_adivinar.remove(letra_usuario)
+            print('')
+        else:
+            vidas = vidas - 1
