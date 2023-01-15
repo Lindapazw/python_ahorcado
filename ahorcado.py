@@ -49,9 +49,19 @@ def ahorcado():
             letras_adivinadas.ad(letra_usuario)
 
         # si la letra esta en la palabra
+        # quitar la letra del conjunto de letras pendientes por adivinar 
+        # si no esta en la letra quitar una vida.
 
-        if letra_usuario in letras_por_adivinar:
-            letras_por_adivinar.remove(letra_usuario)
-            print('')
+            if letra_usuario in letras_por_adivinar:
+                letras_por_adivinar.remove(letra_usuario)
+                print('')
+            else:
+                vidas = vidas - 1
+                print(f"\n Tu letra, {letra_usuario} no esta en la palabra")
+
+            # Si la letra es escogida por el usuario ya fue ingresada.
+        elif letra_usuario in letras_adivinadas:
+            print("\n Ya escogista esa letra. Por favor escoge una letra nueva.")
         else:
-            vidas = vidas - 1
+            print("\n Esta letra no es válida.")
+
