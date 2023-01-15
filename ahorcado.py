@@ -72,5 +72,5 @@ def ahorcado():
     else: 
         print(f"excelente adivinaste la palabra {palabra}!")
 
-        
+ahorcado()
 
